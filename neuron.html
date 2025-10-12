@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interactive ASCII Neuron Structure</title>
+<style>
+  body {
+    background-color: #0b0c10;
+    color: #00ffcc;
+    font-family: "Courier New", monospace;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1 {
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+  }
+
+  pre {
+    font-size: 9px;
+    line-height: 8px;
+    background-color: #000000;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #00ffff44;
+    text-align: left;
+    white-space: pre;
+    overflow-x: auto;
+    display: inline-block;
+  }
+
+  /* === COLOR CLASSES === */
+  .dendrites { color: #3FA9F5; }   /* light cyan */
+  .soma { color: #16a6bf; }        /* medium blue */
+  .nucleus { color: #003789; }     /* dark navy */
+  .axon { color: #94ebfa; }        /* turquoise */
+  .myelin { color: #1e4ce5; }      /* bright blue */
+  .synapse { color: #6562ff; }     /* deep blue */
+
+  /* Optional: hover and click effects */
+  .part:hover {
+    filter: brightness(1.5);
+    text-shadow: 0 0 8px white;
+    cursor: pointer;
+  }
+
+  #info-box {
+    color: white;
+    font-size: 1.1em;
+    border: 2px solid #00ffff;
+    border-radius: 10px;
+    background-color: #1f2833;
+    padding: 10px;
+    margin-top: 20px;
+    display: inline-block;
+    min-width: 400px;
+  }
+</style>
+</head>
+<body>
+  <h1>Interactive ASCII Neuron Structure</h1>
+  <p style="color:#ffffff;">Click any region below to get the describtion of the part of the neuron.</p>
+
+  <pre id="ascii-art">
+<!-- You can start adding <span> here -->
+                                                                                                                                                                
+                                                                                                                                                                
+                                                                                                                                                                
+                                                                                                                                                                
+                                                                                                                                                                
+                                                                                                                                                                
+                                                                                                                                                                
+                                                 <span class="dendrites part" data-part="dendrites">Z</span>                                                                                                              
+                                                 <span class="dendrites part" data-part="dendrites">V</span>                                                                                                              
+                                          <span class="dendrites part" data-part="dendrites">X      U  Z</span>                                                                                                           
+                                          <span class="dendrites part" data-part="dendrites">YZ     TYW</span>                                                                                                            
+                                           <span class="dendrites part" data-part="dendrites">UZ    RY</span>                                                                                                             
+                         <span class="dendrites part" data-part="dendrites">ZY     Z          ZU   ZT</span>                                                                                                              
+                          <span class="dendrites part" data-part="dendrites">ZYY   ZY       ZYXWVZZTY</span>                                                                                                              
+                           <span class="dendrites part" data-part="dendrites"ZYY   ZY       ZYXWVZZTY>YVZ X XY          XSRW</span>                                                                                                               
+                           <span class="dendrites part" data-part="dendrites">ZUY ZWXWZ          VSZ  ZZ</span>                                                                                                           
+                       <span class="dendrites part" data-part="dendrites">Z     UX  YTY         ZVU  ZW        Z    YZYY</span>                                                                                           
+                     <span class="dendrites part" data-part="dendrites">ZYWUTTTTSRV  WTZ        YSW ZTZ       YZ   XUY</span>                                                                                             
+                               <span class="dendrites part" data-part="dendrites">URWZTU       ZSRRRS        ZUXTSY</span>                                                                                                
+                                 <span class="dendrites part" data-part="dendrites">XTRRSY</span><span class="soma part" data-part="soma">ZZZYTRRRRRT</span>      <span class="dendrites part" data-part="dendrites">ZWSUZ</span>                                                                                                   
+                                    <span class="dendrites part" data-part="dendrites">VR</span><span class="soma part" data-part="soma">RRRRRRRRRRRRSVXWT</span><span class="dendrites part" data-part="dendrites">RRTYZWXZ</span>                                                                                                 
+                    <span class="dendrites part" data-part="dendrites">ZXY   ZXZ</span>        <span class="soma part" data-part="soma">ZRRRRRRRRRRRRRRRRRR</span><span class="dendrites part" data-part="dendrites">TWYZZ</span>                                                                                                   
+                      <span class="dendrites part" data-part="dendrites">ZVVZ  XW</span>       <span class="soma part" data-part="soma">ZSRRRRR</span><span class="nucleus part" data-part="nucleus">QONMN</span><span class="soma part" data-part="soma">PRRRRV</span>                                                                                                         
+                       <span class="dendrites part" data-part="dendrites">ZVRTTTRTY</span>    <span class="soma part" data-part="soma">ZTRRRRR</span><span class="nucleus part" data-part="nucleus">MKJIIJKL</span><span class="soma part" data-part="soma">PRRZ</span>                                                                                                         
+                <span class="dendrites part" data-part="dendrites">YZ  ZWSRY     ZXRRRR</span><span class="soma part" data-part="soma">RRRRRRP</span><span class="nucleus part" data-part="nucleus">KJHGGGHKL</span><span class="soma part" data-part="soma">QRX</span>                                                                                                         
+           <span class="dendrites part" data-part="dendrites">ZWWWWWWXZ  VZ     ZSX  XY</span>  <span class="soma part" data-part="soma">ZTRRQ</span><span class="nucleus part" data-part="nucleus">KKIHGGHKM</span><span class="soma part" data-part="soma">RRRU</span>                                                                                                        
+                     <span class="dendrites part" data-part="dendrites">XY    ZUW</span>          <span class="soma part" data-part="soma">WRRQ</span><span class="nucleus part" data-part="nucleus">MKKKKKM</span><span class="soma part" data-part="soma">RRRRR</span><span class="myelin part" data-part="myelin">RRRTONOOOPRUXYZZ</span>                                                                                        
+                   <span class="dendrites part" data-part="dendrites">ZWX      Y</span>           <span class="soma part" data-part="soma">ZTRRRRRRRRRRRRV</span><span class="axon part" data-part="axon">YZZWQMLLLLLLMNNN</span><span class="myelin part" data-part="myelin">OOOX  YYYZ</span>                                                        <span class="synapse part" data-part="synapse">UY</span>                     
+                    <span class="dendrites part" data-part="dendrites">ZZ</span>                  <span class="soma part" data-part="soma">XSRRRRRRRRRRRX</span>     <span class="myelin part" data-part="myelin">WRQOOONMMM<span class="axon part" data-part="axon">LLLLLRSR</span>NNNNOOQTVWYZ</span>                                                 <span class="synapse part" data-part="synapse">Z   YVZ</span>               
+                                       <span class="dendrites part" data-part="dendrites">WSR<span class="soma part" data-part="soma">RTVWVTRRRRR</span>W</span>          <span class="myelin part" data-part="myelin">ZYXWVTRPORYX<span class="axon part" data-part="axon">SMMLLLLLLMMN</span>OOQZ</span>                                              <span class="synapse part" data-part="synapse">YXXY</span>                  
+                           <span class="dendrites part" data-part="dendrites">ZZXVZ    ZVSRTY       URRSRW</span>                     <span class="myelin part" data-part="myelin">ZWTQOOONNN<span class="axon part" data-part="axon">MLLLMS</span>UWVPPRSWZ                               <span class="synapse part" data-part="synapse">ZXZ   ZX</span></span>                    
+                            <span class="dendrites part" data-part="dendrites">WUVTYYXURRSW          STZZSSZ</span>                         <span class="myelin part" data-part="myelin">ZZYWSPOOVYV<span class="axon part" data-part="axon">RMLLLMN</span>OPQSX                              <span class="synapse part" data-part="synapse">ZXWZWZ</span></span>                   
+                        <span class="dendrites part" data-part="dendrites">YVXZYZ   XTUVRW           TV   ZTRSSTTTZ</span>                             <span class="myelin part" data-part="myelin">YPOON<span class="axon part" data-part="axon">LLLLLM</span>OOOPX                             <span class="synapse part" data-part="synapse">XSV     XZ</span></span>            
+                           <span class="dendrites part" data-part="dendrites">Z  ZTV   ZRV          ZSZ      VUZ</span>                                   <span class="myelin part" data-part="myelin">ZXQPOO<span class="axon part" data-part="axon">MLLLLM</span>VYVZZ                          <span class="synapse part" data-part="synapse">ZU    XZ</span></span>             
+                           <span class="dendrites part" data-part="dendrites">ZVVYV   ZTZZW        YUUVZ       WVZ</span>                                      <span class="myelin part" data-part="myelin">ZWSQPN<span class="axon part" data-part="axon">QSROM</span>NORWZ                      <span class="synapse part" data-part="synapse">ZU  ZWZ</span></span>              
+                         <span class="dendrites part" data-part="dendrites">YZZY WZ   YZX Z       YW ZWXUX       XX</span>                                          <span class="myelin part" data-part="myelin">RKKV<span class="axon part" data-part="axon">NMLLLM</span>NOTXZ        <span class="synapse part" data-part="synapse">XZZ       YUZVV</span></span>                
+                           <span class="dendrites part" data-part="dendrites">ZZ U     YXZ            YZZW        ZXXZ</span>                                          <span class="myelin part" data-part="myelin">ZURO<span class="axon part" data-part="axon">ONMLLLM</span>NQUY     <span class="synapse part" data-part="synapse">Y  YWWZ  ZTSUZ</span></span>                 
+                             <span class="dendrites part" data-part="dendrites">YW     X                  X         ZZ</span>                                             <span class="myelin part" data-part="myelin">ZXTPO<span class="axon part" data-part="axon">ONMLLM</span>NY         <span class="synapse part" data-part="synapse">ZVSSSX</span></span>                   
+                              <span class="dendrites part" data-part="dendrites">ZZ</span>                                                                                    <span class="myelin part" data-part="myelin">ZXS<span class="axon part" data-part="axon">OONNQ</span>RS<span class="synapse part" data-part="synapse">TXYYWVUTSSRRW</span></span>                     
+                                                                                                                        <span class="myelin part" data-part="myelin">ZYZ</span>  <span class="synapse part" data-part="synapse">ZVRRRUYZ    ZUVZZYVUVWXZZ</span>          
+                                                                                                                               <span class="synapse part" data-part="synapse">VRZ         ZVTY     ZZ</span>          
+                                                                                                                               <span class="synapse part" data-part="synapse">VRZ             ZWY</span>              
+                                                                                                                               <span class="synapse part" data-part="synapse">WRSZ               ZUZ</span>           
+                                                                                                                               <span class="synapse part" data-part="synapse">WSRSUXYZ   ZZZYYVZ</span>               
+                                                                                                                      <span class="synapse part" data-part="synapse">ZVYZ     WTZTVYXWUSWYZ</span>                    
+                                                                                                                          <span class="synapse part" data-part="synapse">XUZ YTR  XUY   ZYVZ</span>                   
+                                                                                                                         <span class="synapse part" data-part="synapse">XUSSUXZTY   YUY</span>                        
+                                                                                                                      <span class="synapse part" data-part="synapse">XX        XS      VUZ</span>                     
+                                                                                                                                <span class="synapse part" data-part="synapse">UZV      XZ ZYYVZ</span>               
+                                                                                                                              <span class="synapse part" data-part="synapse">ZWZ ZX     ZY</span>                      
+                                                                                                                               <span class="synapse part" data-part="synapse">Z   ZWZ    ZZZ</span>                   
+                                                                                                                                    <span class="synapse part" data-part="synapse">Z      ZX</span>                   
+                                                                                                                                                                
+                                                                                                                                                                
+                                                                                                                                                                
+                                                                                                                                                                
+                                                                                                                                                                
+                                                                                                                                                                
+<!-- Add spans here freely -->
+  </pre>
+
+  <div id="info-box">Click on a colored region to describe it.</div>
+
+  <script>
+
+    const neuronParts = {
+      dendrites: "Dendrites: Receive messages from other cells.",
+      soma: "Soma(cell body): The cell’s life-support center.",
+      nucleus: "Nucleus: Contains DNA and controls neuron activity.",
+      axon: "Axon: Passes messages away from the cell body to other neurons, muscles, or glands.",
+      myelin: "Myelin sheath: Covers the axon of some neurons and helps speed neural impulses.",
+      synapse: "Terminal branches of axon: Form junctions with other cells.",
+    };
+
+    // Interactivity (optional)
+    document.addEventListener('click', e => {
+      if (e.target.classList.contains('part')) {
+        const partName = e.target.dataset.part;
+        document.getElementById('info-box').textContent = neuronParts[partName] || "Unknown section.";
+      }
+    });
+  </script>
+</body>
+</html>
